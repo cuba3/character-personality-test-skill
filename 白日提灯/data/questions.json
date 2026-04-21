@@ -1,0 +1,83 @@
+{
+  "drama": "白日提灯",
+  "title": "角色人格测试",
+  "description": "测测你更像《白日提灯》中的哪个角色",
+  "characters": {
+    "贺思慕": {
+      "name": "贺思慕",
+      "actor": "迪丽热巴",
+      "description": "统御归墟四百年的鬼王，天生缺失五感（视、听、嗅、味、触），白天伪装成柔弱孤女\"贺小小\"，夜晚化身白发红衣的万灵之主。以提灯引渡亡魂维系人鬼两界平衡。",
+      "traits": ["清冷", "深情", "强大", "孤独"],
+      "quote": "人鬼殊途，我不认。",
+      "avatar": "🕯️",
+      "imageUrl": ""
+    },
+    "段胥": {
+      "name": "段胥",
+      "actor": "陈飞宇",
+      "description": "背负灭门血仇的少年将军，表面意气风发，实则童年被囚禁为死侍。阳光笑容下藏着阴郁偏执，手持神器\"破妄剑\"，与贺思慕结下五感互通的生死契约。",
+      "traits": ["坚韧", "深情", "腹黑", "成长"],
+      "quote": "我赌你会来找我。",
+      "avatar": "⚔️",
+      "imageUrl": ""
+    },
+    "晏柯": {
+      "name": "晏柯",
+      "actor": "魏哲鸣",
+      "description": "前朝皇子，为夺权勾结叛灵，制造代州七年命案，意图颠覆人灵两界。表面温润，实则阴险腹黑，是剧中的反派谋士，与贺思慕有复杂纠葛。",
+      "traits": ["阴险", "权谋", "深情", "偏执"],
+      "quote": "这天下，本该是我的。",
+      "avatar": "🎭",
+      "imageUrl": ""
+    },
+    "姜艾": {
+      "name": "姜艾",
+      "actor": "张俪",
+      "description": "归墟左丞，与右丞晏柯并称鬼界双柱。是贺思慕三百年最忠诚的心腹，行事毒舌通透、嘴硬心软，经营赌坊、青楼等产业，是鬼界二十四殿首富。",
+      "traits": ["毒舌", "忠诚", "通透", "首富"],
+      "quote": "钱是赚不完的，但命只有一条。",
+      "avatar": "💰",
+      "imageUrl": ""
+    },
+    "沉英": {
+      "name": "沉英",
+      "actor": "徐崴罗",
+      "description": "被贺思慕救下的少年，对其产生强烈依赖。常以黏人举动表达情感，后对段胥心生仰望并立志保家卫国，14岁时战死沙场，后化为游灵，最终成为归墟之主。",
+      "traits": ["忠诚", "依赖", "成长", "勇敢"],
+      "quote": "姐姐，我来守护你。",
+      "avatar": "🛡️",
+      "imageUrl": ""
+    },
+    "颜璋": {
+      "name": "颜璋",
+      "actor": "安悦溪",
+      "description": "前世被心上人背叛惨死，被晏柯复仇收留。对晏柯痴心一片，明知被利用仍飞蛾扑火般付出一切，是悲剧色彩的痴情角色。",
+      "traits": ["痴情", "忠贞", "悲剧", "执念"],
+      "quote": "为你，我愿付出一切。",
+      "avatar": "🔥",
+      "imageUrl": ""
+    }
+  },
+  "questions": [
+    {"id": 1, "text": "面对强大的敌人，你会选择？", "options": [{"text": "以绝对的力量压制", "character": "贺思慕"}, {"text": "用计谋智取", "character": "段胥"}, {"text": "暗中操控局势", "character": "晏柯"}, {"text": "寻找盟友共同对抗", "character": "姜艾"}]},
+    {"id": 2, "text": "你更看重什么？", "options": [{"text": "职责与使命", "character": "贺思慕"}, {"text": "真相与正义", "character": "段胥"}, {"text": "权力与地位", "character": "晏柯"}, {"text": "忠诚与情义", "character": "沉英"}]},
+    {"id": 3, "text": "面对失去，你会怎么做？", "options": [{"text": "独自承受，坚强面对", "character": "贺思慕"}, {"text": "执着追寻，不放弃", "character": "段胥"}, {"text": "隐忍蛰伏，等待时机", "character": "晏柯"}, {"text": "珍惜当下，乐观生活", "character": "姜艾"}]},
+    {"id": 4, "text": "你更擅长什么？", "options": [{"text": "感知与守护", "character": "贺思慕"}, {"text": "战斗与领导", "character": "段胥"}, {"text": "谋划与布局", "character": "晏柯"}, {"text": "经营与管理", "character": "姜艾"}]},
+    {"id": 5, "text": "你的感情表达方式是？", "options": [{"text": "沉默守护，用行动证明", "character": "贺思慕"}, {"text": "热烈直接，奋不顾身", "character": "段胥"}, {"text": "隐忍克制，压抑情感", "character": "晏柯"}, {"text": "飞蛾扑火，执着付出", "character": "颜璋"}]},
+    {"id": 6, "text": "面对规则和秩序，你会？", "options": [{"text": "严格遵守，维护秩序", "character": "贺思慕"}, {"text": "质疑规则，追寻真相", "character": "段胥"}, {"text": "利用规则达成目的", "character": "晏柯"}, {"text": "在规则内灵活变通", "character": "姜艾"}]},
+    {"id": 7, "text": "你更欣赏什么样的人？", "options": [{"text": "忠诚可靠的人", "character": "姜艾"}, {"text": "勇敢正直的人", "character": "段胥"}, {"text": "聪明有野心的人", "character": "晏柯"}, {"text": "温暖善良的人", "character": "沉英"}]},
+    {"id": 8, "text": "当你犯错时，你会？", "options": [{"text": "承认错误，承担后果", "character": "段胥"}, {"text": "掩饰错误，保护自己", "character": "晏柯"}, {"text": "反思自己，寻求改变", "character": "贺思慕"}, {"text": "寻求帮助，继续前进", "character": "沉英"}]},
+    {"id": 9, "text": "你更看重什么品质？", "options": [{"text": "坚韧不拔", "character": "贺思慕"}, {"text": "勇敢无畏", "character": "段胥"}, {"text": "智慧谋略", "character": "晏柯"}, {"text": "通透善良", "character": "姜艾"}]},
+    {"id": 10, "text": "面对艰难抉择，你会？", "options": [{"text": "牺牲自我，成全大局", "character": "段胥"}, {"text": "权衡利弊，做出选择", "character": "晏柯"}, {"text": "坚守底线，绝不妥协", "character": "贺思慕"}, {"text": "顺其自然，随遇而安", "character": "姜艾"}]},
+    {"id": 11, "text": "你更喜欢哪种生活方式？", "options": [{"text": "承担责任，服务他人", "character": "贺思慕"}, {"text": "追求理想，建功立业", "character": "段胥"}, {"text": "掌控全局，站在顶端", "character": "晏柯"}, {"text": "平静安稳，享受生活", "character": "沉英"}]},
+    {"id": 12, "text": "你如何对待敌人？", "options": [{"text": "以暴制暴，绝不手软", "character": "晏柯"}, {"text": "依法惩处，维护正义", "character": "段胥"}, {"text": "以牙还牙，睚眦必报", "character": "颜璋"}, {"text": "化解仇恨，给机会", "character": "贺思慕"}]},
+    {"id": 13, "text": "面对压力时，你会？", "options": [{"text": "冷静分析，寻找突破口", "character": "段胥"}, {"text": "独自承受，默默承担", "character": "贺思慕"}, {"text": "暗中筹谋，等待机会", "character": "晏柯"}, {"text": "倾诉分享，获得支持", "character": "沉英"}]},
+    {"id": 14, "text": "你更看重什么关系？", "options": [{"text": "君臣之谊，忠诚相待", "character": "姜艾"}, {"text": "知己之交，心意相通", "character": "段胥"}, {"text": "主仆之情，誓死追随", "character": "颜璋"}, {"text": "姐弟之情，血浓于水", "character": "沉英"}]},
+    {"id": 15, "text": "你如何定义成功？", "options": [{"text": "守护想守护的人", "character": "贺思慕"}, {"text": "实现理想，证明自己", "character": "段胥"}, {"text": "掌控命运，站在巅峰", "character": "晏柯"}, {"text": "平安喜乐，家庭和睦", "character": "姜艾"}]},
+    {"id": 16, "text": "面对背叛，你会？", "options": [{"text": "愤怒但克制，追查真相", "character": "段胥"}, {"text": "冷静应对，收集证据", "character": "晏柯"}, {"text": "心寒失望，选择放手", "character": "贺思慕"}, {"text": "理解包容，给机会", "character": "沉英"}]},
+    {"id": 17, "text": "你最害怕什么？", "options": [{"text": "失去使命的意义", "character": "贺思慕"}, {"text": "失去重要的人", "character": "段胥"}, {"text": "失去权力和控制", "character": "晏柯"}, {"text": "失去平静的生活", "character": "姜艾"}]},
+    {"id": 18, "text": "你更愿意为什么付出一切？", "options": [{"text": "维护人灵秩序", "character": "贺思慕"}, {"text": "守护家国天下", "character": "段胥"}, {"text": "守护心中所爱", "character": "颜璋"}, {"text": "守护家人和所爱", "character": "沉英"}]},
+    {"id": 19, "text": "面对选择，你会？", "options": [{"text": "顾全大局，牺牲小我", "character": "段胥"}, {"text": "坚持自我，不被左右", "character": "贺思慕"}, {"text": "审时度势，随机应变", "character": "晏柯"}, {"text": "跟随内心，顺其自然", "character": "姜艾"}]},
+    {"id": 20, "text": "你理想的人生是？", "options": [{"text": "承担使命，守护苍生", "character": "贺思慕"}, {"text": "驰骋疆场，建功立业", "character": "段胥"}, {"text": "运筹帷幄，掌控一切", "character": "晏柯"}, {"text": "岁月静好，现世安稳", "character": "沉英"}]}
+  ]
+}

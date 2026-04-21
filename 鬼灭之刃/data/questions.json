@@ -1,0 +1,101 @@
+{
+  "drama": "鬼灭之刃",
+  "title": "鬼灭之刃角色人格测试",
+  "description": "测测你更像《鬼灭之刃》中的哪个角色",
+  "characters": {
+    "灶门炭治郎": {
+      "name": "灶门炭治郎",
+      "actor": "花江夏树",
+      "description": "你更像《鬼灭之刃》中的灶门炭治郎！善良温柔，重视家人，有着敏锐的嗅觉，是水之呼吸的使用者。",
+      "traits": ["善良温柔", "重视家人", "责任感强", "温柔体贴"],
+      "quote": "我会保护妹妹！",
+      "avatar": "🔥",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/star/53/217/260x346.jpg"
+    },
+    "灶门祢豆子": {
+      "name": "灶门祢豆子",
+      "actor": "鬼头明里",
+      "description": "你更像《鬼灭之刃》中的灶门祢豆子！虽然变成了鬼，但仍然保持着善良的内心，是可爱的妹妹。",
+      "traits": ["善良可爱", "坚强勇敢", "保护家人", "萌系"],
+      "quote": "嗯！",
+      "avatar": "🌸",
+      "imageUrl": "https://pix2.tvzhe.com/images/default/character_avatar_260x346.jpg"
+    },
+    "我妻善逸": {
+      "name": "我妻善逸",
+      "actor": "下野纮",
+      "description": "你更像《鬼灭之刃》中的我妻善逸！虽然平时爱哭怕事，但关键时刻非常可靠，是雷之呼吸的使用者。",
+      "traits": ["怕麻烦", "关键时刻可靠", "恋爱脑", "单相思"],
+      "quote": "我不想死！",
+      "avatar": "⚡",
+      "imageUrl": "https://pix2.tvzhe.com/images/default/character_avatar_260x346.jpg"
+    },
+    "嘴平伊之助": {
+      "name": "嘴平伊之助",
+      "actor": "松冈祯丞",
+      "description": "你更像《鬼灭之刃》中的嘴平伊之助！暴力但单纯，喜欢用猪头套，战斗力超强，是兽之呼吸的使用者。",
+      "traits": ["单纯直接", "暴力倾向", "野兽直觉", "天然呆"],
+      "quote": "猪突猛进！",
+      "avatar": "🐗",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/star/8/953/260x346.jpg"
+    },
+    "富冈义勇": {
+      "name": "富冈义勇",
+      "actor": "樱井孝宏",
+      "description": "你更像《鬼灭之刃》中的富冈义勇！外冷内热，不擅表达，但其实是水柱，实力超强。",
+      "traits": ["外冷内热", "沉默寡言", "实力强大", "傲娇"],
+      "quote": "我没有被讨厌。",
+      "avatar": "💧",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/star/8/953/260x346.jpg"
+    },
+    "蝴蝶忍": {
+      "name": "蝴蝶忍",
+      "actor": "悠木碧",
+      "description": "你更像《鬼灭之刃》中的蝴蝶忍！外表温柔可爱，实际上是毒杀高手，擅长用藤蔓呼吸。",
+      "traits": ["腹黑可爱", "毒舌", "聪明伶俐", "温柔腹黑"],
+      "quote": "真是可爱呢。",
+      "avatar": "🦋",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/star/48/347/260x346.jpg"
+    },
+    "炼狱杏寿郎": {
+      "name": "炼狱杏寿郎",
+      "actor": "日野聪",
+      "description": "你更像《鬼灭之刃》中的炼狱杏寿郎！热情开朗，总是充满活力，是炎柱，有着我燃烧般的灵魂！",
+      "traits": ["热情开朗", "充满活力", "正义感强", "热血"],
+      "quote": "我会保护大家！",
+      "avatar": "🔥",
+      "imageUrl": "https://pix2.tvzhe.com/images/default/character_avatar_260x346.jpg"
+    },
+    "甘露寺蜜璃": {
+      "name": "甘露寺蜜璃",
+      "actor": "花守ゆみり",
+      "description": "你更像《鬼灭之刃》中的甘露寺蜜璃！温柔可爱，恋爱时会变得超级强，是恋柱！",
+      "traits": ["温柔可爱", "恋爱脑", "纯真热情", "力大无穷"],
+      "quote": "我喜欢强大的人！",
+      "avatar": "💗",
+      "imageUrl": "https://pix2.tvzhe.com/images/default/character_avatar_260x346.jpg"
+    }
+  },
+  "questions": [
+    {"id": 1, "text": "如果你遇到危险，你会怎么做？", "options": [{"text": "第一时间保护身边的人", "character": "灶门炭治郎"}, {"text": "使用武力解决", "character": "嘴平伊之助"}, {"text": "冷静分析寻找对策", "character": "富冈义勇"}, {"text": "想办法智取", "character": "蝴蝶忍"}]},
+    {"id": 2, "text": "你的朋友遇到困难，你会？", "options": [{"text": "二话不说去帮忙", "character": "炼狱杏寿郎"}, {"text": "默默陪在他身边", "character": "灶门炭治郎"}, {"text": "表面上嫌弃但还是会帮", "character": "蝴蝶忍"}, {"text": "给对方加油鼓劲", "character": "甘露寺蜜璃"}]},
+    {"id": 3, "text": "你如何看待"鬼"？", "options": [{"text": "即使是鬼也有苦衷", "character": "灶门炭治郎"}, {"text": "必须消灭", "character": "嘴平伊之助"}, {"text": "可以理解但不能原谅", "character": "富冈义勇"}, {"text": "研究它们的弱点", "character": "蝴蝶忍"}]},
+    {"id": 4, "text": "你恋爱时会？", "options": [{"text": "变得超级强", "character": "甘露寺蜜璃"}, {"text": "全心全意对对方好", "character": "灶门炭治郎"}, {"text": "害羞但会主动", "character": "我妻善逸"}, {"text": "默默守护", "character": "富冈义勇"}]},
+    {"id": 5, "text": "你最强的特质是？", "options": [{"text": "敏锐的直觉", "character": "灶门炭治郎"}, {"text": "强大的战斗力", "character": "嘴平伊之助"}, {"text": "冷静的判断力", "character": "富冈义勇"}, {"text": "聪明的头脑", "character": "蝴蝶忍"}]},
+    {"id": 6, "text": "你害怕什么？", "options": [{"text": "失去重要的人", "character": "灶门炭治郎"}, {"text": "孤独一人", "character": "我妻善逸"}, {"text": "承认自己弱小", "character": "嘴平伊之助"}, {"text": "被讨厌", "character": "富冈义勇"}]},
+    {"id": 7, "text": "你的战斗风格是？", "options": [{"text": "正面突击", "character": "炼狱杏寿郎"}, {"text": "技巧型", "character": "灶门炭治郎"}, {"text": "力量型", "character": "嘴平伊之助"}, {"text": "速度型", "character": "我妻善逸"}]},
+    {"id": 8, "text": "你如何面对失败？", "options": [{"text": "继续努力不放弃", "character": "灶门炭治郎"}, {"text": "变得更强大", "character": "甘露寺蜜璃"}, {"text": "反思自己的不足", "character": "蝴蝶忍"}, {"text": "下次一定赢", "character": "嘴平伊之助"}]},
+    {"id": 9, "text": "你的口头禅是？", "options": [{"text": "我会保护大家！", "character": "炼狱杏寿郎"}, {"text": "我不想死！", "character": "我妻善逸"}, {"text": "猪突猛进！", "character": "嘴平伊之助"}, {"text": "嗯！", "character": "灶门祢豆子"}]},
+    {"id": 10, "text": "你更喜欢什么样的伙伴？", "options": [{"text": "温柔可靠的人", "character": "灶门炭治郎"}, {"text": "强大的人", "character": "甘露寺蜜璃"}, {"text": "有趣的人", "character": "蝴蝶忍"}, {"text": "能一起战斗的人", "character": "炼狱杏寿郎"}]},
+    {"id": 11, "text": "面对强大的敌人，你会？", "options": [{"text": "勇敢战斗不退缩", "character": "炼狱杏寿郎"}, {"text": "想办法找到弱点", "character": "灶门炭治郎"}, {"text": "直接冲上去", "character": "嘴平伊之助"}, {"text": "使用计谋", "character": "蝴蝶忍"}]},
+    {"id": 12, "text": "你重视的东西是？", "options": [{"text": "家人和朋友", "character": "灶门炭治郎"}, {"text": "强大的力量", "character": "甘露寺蜜璃"}, {"text": "正义和责任", "character": "富冈义勇"}, {"text": "战斗的意义", "character": "炼狱杏寿郎"}]},
+    {"id": 13, "text": "你平时看起来像？", "options": [{"text": "温柔的大哥哥", "character": "灶门炭治郎"}, {"text": "可爱的女孩子", "character": "甘露寺蜜璃"}, {"text": "高冷的美男子", "character": "富冈义勇"}, {"text": "活泼开朗", "character": "炼狱杏寿郎"}]},
+    {"id": 14, "text": "你的梦想是？", "options": [{"text": "让妹妹变回人类", "character": "灶门炭治郎"}, {"text": "找到强大的伴侣", "character": "甘露寺蜜璃"}, {"text": "消灭所有恶鬼", "character": "炼狱杏寿郎"}, {"text": "变强", "character": "嘴平伊之助"}]},
+    {"id": 15, "text": "你如何表达感情？", "options": [{"text": "用行动表示", "character": "灶门炭治郎"}, {"text": "直接说出来", "character": "炼狱杏寿郎"}, {"text": "害羞不好意思说", "character": "我妻善逸"}, {"text": "腹黑地调侃", "character": "蝴蝶忍"}]},
+    {"id": 16, "text": "你的弱点是？", "options": [{"text": "家人被伤害", "character": "灶门炭治郎"}, {"text": "被说是没用的人", "character": "我妻善逸"}, {"text": "被讨厌", "character": "富冈义勇"}, {"text": "恋爱", "character": "甘露寺蜜璃"}]},
+    {"id": 17, "text": "战斗中你会？", "options": [{"text": "观察对手寻找破绽", "character": "灶门炭治郎"}, {"text": "全力进攻", "character": "炼狱杏寿郎"}, {"text": "用计谋", "character": "蝴蝶忍"}, {"text": "横冲直撞", "character": "嘴平伊之助"}]},
+    {"id": 18, "text": "你相信命运吗？", "options": [{"text": "命运要自己掌握", "character": "灶门炭治郎"}, {"text": "相信缘分", "character": "甘露寺蜜璃"}, {"text": "不相信", "character": "嘴平伊之助"}, {"text": "一半一半", "character": "富冈义勇"}]},
+    {"id": 19, "text": "你最想拥有什么能力？", "options": [{"text": "强大的嗅觉", "character": "灶门炭治郎"}, {"text": "雷电的力量", "character": "我妻善逸"}, {"text": "治愈能力", "character": "蝴蝶忍"}, {"text": "火焰的力量", "character": "炼狱杏寿郎"}]},
+    {"id": 20, "text": "你希望自己成为什么样的人？", "options": [{"text": "温柔强大的人", "character": "灶门炭治郎"}, {"text": "热情如火的人", "character": "炼狱杏寿郎"}, {"text": "可靠的人", "character": "富冈义勇"}, {"text": "可爱的人", "character": "甘露寺蜜璃"}]}
+  ]
+}

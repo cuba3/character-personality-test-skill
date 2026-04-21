@@ -1,0 +1,101 @@
+{
+  "drama": "逐玉",
+  "title": "逐玉角色人格测试",
+  "description": "测测你更像《逐玉》中的哪个角色",
+  "characters": {
+    "樊长玉": {
+      "name": "樊长玉",
+      "actor": "田曦薇",
+      "description": "你更像《逐玉》中的樊长玉！市井杀猪女成长为护国女将军，勇敢坚韧、直爽泼辣。",
+      "traits": ["勇敢坚韧", "直爽泼辣", "成长型", "有锋芒的善良"],
+      "quote": "我杀猪养你！",
+      "avatar": "⚔️",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/character/474/987/260x346.jpg"
+    },
+    "谢征": {
+      "name": "谢征",
+      "actor": "张凌赫",
+      "description": "你更像《逐玉》中的谢征！镇国大将军，外冷内热、隐忍深情。",
+      "traits": ["外冷内热", "隐忍深情", "腹黑深情", "复仇者"],
+      "quote": "为了你，我愿放弃一切。",
+      "avatar": "🎭",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/character/474/986/260x346.jpg"
+    },
+    "李怀安": {
+      "name": "李怀安",
+      "actor": "任豪",
+      "description": "你更像《逐玉》中的李怀安！温润如玉，是最温柔的守护者。",
+      "traits": ["温润如玉", "深情守护", "温柔体贴", "包容型"],
+      "quote": "只要你开心就好。",
+      "avatar": "🌸",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/character/474/988/260x346.jpg"
+    },
+    "俞浅浅": {
+      "name": "俞浅浅",
+      "actor": "孔雪儿",
+      "description": "你更像《逐玉》中的俞浅浅！活泼可爱，像小太阳一样温暖。",
+      "traits": ["活泼可爱", "阳光灿烂", "天真烂漫", "开心果"],
+      "quote": "今天也要开心哦！",
+      "avatar": "☀️",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/character/474/989/260x346.jpg"
+    },
+    "齐旻": {
+      "name": "齐旻",
+      "actor": "邓凯",
+      "description": "你更像《逐玉》中的齐旻！前朝遗孤皇孙，银发疯批，腹黑深沉。",
+      "traits": ["腹黑深沉", "智谋过人", "冷静理性", "掌控者"],
+      "quote": "棋子也要有棋子的觉悟。",
+      "avatar": "🌙",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/character/474/990/260x346.jpg"
+    },
+    "公孙鄞": {
+      "name": "公孙鄞",
+      "actor": "李卿",
+      "description": "你更像《逐玉》中的公孙鄞！神秘莫测，保持着冷静与理性。",
+      "traits": ["神秘莫测", "冷静理性", "高深莫测", "旁观者"],
+      "quote": "一切尽在掌握中。",
+      "avatar": "🎯",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/character/474/991/260x346.jpg"
+    },
+    "齐姝": {
+      "name": "齐姝",
+      "actor": "喻钟黎",
+      "description": "你更像《逐玉》中的齐姝！温柔婉约，才情出众的才女。",
+      "traits": ["温柔婉约", "才情出众", "知书达理", "贤淑型"],
+      "quote": "琴棋书画，样样精通。",
+      "avatar": "📜",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/drama/161/36/270x360.jpg"
+    },
+    "赵大娘": {
+      "name": "赵大娘",
+      "actor": "刘琳",
+      "description": "你更像《逐玉》中的赵大娘！慈祥善良，是最接地气的存在。",
+      "traits": ["慈祥善良", "接地气", "热心肠", "慈母型"],
+      "quote": "孩子，慢点吃。",
+      "avatar": "❤️",
+      "imageUrl": "https://pix2.tvzhe.com/thumb/drama/161/36/270x360.jpg"
+    }
+  },
+  "questions": [
+    {"id": 1, "text": "如果你遇到不公平的事情，你会怎么做？", "options": [{"text": "直接冲上去理论，寸步不让", "character": "樊长玉"}, {"text": "暗中收集证据，等待时机", "character": "齐旻"}, {"text": "先看看能不能和平解决", "character": "李怀安"}, {"text": "找机会曲线救国", "character": "公孙鄞"}]},
+    {"id": 2, "text": "你的朋友失恋了，你会怎么安慰？", "options": [{"text": "带她去吃好吃的，转移注意力", "character": "俞浅浅"}, {"text": "默默陪在她身边，给她依靠", "character": "李怀安"}, {"text": "帮她分析问题，给出建议", "character": "公孙鄞"}, {"text": "带她去喝酒，一醉解千愁", "character": "樊长玉"}]},
+    {"id": 3, "text": "你更倾向于哪种恋爱方式？", "options": [{"text": "轰轰烈烈，勇敢追爱", "character": "樊长玉"}, {"text": "默默守护，不求回报", "character": "谢征"}, {"text": "细水长流，日久生情", "character": "李怀安"}, {"text": "棋逢对手，势均力敌", "character": "齐旻"}]},
+    {"id": 4, "text": "当你发现有人在背后说你坏话，你会？", "options": [{"text": "直接找他对质", "character": "樊长玉"}, {"text": "装作不在乎，暗中观察", "character": "齐旻"}, {"text": "反思自己是不是有做的不对的地方", "character": "李怀安"}, {"text": "以其人之道还治其人之身", "character": "谢征"}]},
+    {"id": 5, "text": "你最喜欢的休闲方式是？", "options": [{"text": "到处游玩，结交新朋友", "character": "俞浅浅"}, {"text": "独自思考，看看书", "character": "公孙鄞"}, {"text": "和喜欢的人在一起，做什么都好", "character": "李怀安"}, {"text": "计划下一次冒险", "character": "樊长玉"}]},
+    {"id": 6, "text": "面对困难时，你通常会？", "options": [{"text": "迎难而上，绝不退缩", "character": "樊长玉"}, {"text": "冷静分析，寻找突破口", "character": "齐旻"}, {"text": "向身边的人求助", "character": "李怀安"}, {"text": "等待时机，厚积薄发", "character": "谢征"}]},
+    {"id": 7, "text": "你对金钱的态度是？", "options": [{"text": "够用就行，开心最重要", "character": "俞浅浅"}, {"text": "钱要花在刀刃上", "character": "齐旻"}, {"text": "对自己在乎的人可以大方", "character": "李怀安"}, {"text": "努力赚钱，为了安全感", "character": "谢征"}]},
+    {"id": 8, "text": "如果你发现好朋友欺骗了你，你会？", "options": [{"text": "当面质问，讨个说法", "character": "樊长玉"}, {"text": "默默伤心，选择原谅", "character": "李怀安"}, {"text": "收集证据，以备后用", "character": "齐旻"}, {"text": "从此疏远，不再信任", "character": "公孙鄞"}]},
+    {"id": 9, "text": "你更喜欢什么样的生活方式？", "options": [{"text": "充满刺激和挑战", "character": "樊长玉"}, {"text": "平静安稳，岁月静好", "character": "李怀安"}, {"text": "不断学习，提升自己", "character": "齐旻"}, {"text": "自由洒脱，无拘无束", "character": "俞浅浅"}]},
+    {"id": 10, "text": "在团队中，你更倾向于扮演什么角色？", "options": [{"text": "领导者，指引方向", "character": "樊长玉"}, {"text": "军师，运筹帷幄", "character": "齐旻"}, {"text": "和事佬，协调关系", "character": "李怀安"}, {"text": "执行者，完成任务", "character": "谢征"}]},
+    {"id": 11, "text": "你如何看待「复仇」这件事？", "options": [{"text": "有仇必报，快意恩仇", "character": "樊长玉"}, {"text": "冤冤相报何时了", "character": "李怀安"}, {"text": "复仇需要周密计划", "character": "齐旻"}, {"text": "有时候复仇是身不由己", "character": "谢征"}]},
+    {"id": 12, "text": "你更看重朋友的什么特质？", "options": [{"text": "真诚坦率", "character": "樊长玉"}, {"text": "温柔体贴", "character": "李怀安"}, {"text": "聪明睿智", "character": "齐旻"}, {"text": "有趣可爱", "character": "俞浅浅"}]},
+    {"id": 13, "text": "当你做错事时，你会？", "options": [{"text": "勇于承认，立刻道歉", "character": "樊长玉"}, {"text": "找借口掩饰", "character": "齐旻"}, {"text": "内疚自责，难以释怀", "character": "李怀安"}, {"text": "想办法弥补", "character": "谢征"}]},
+    {"id": 14, "text": "你理想的约会方式是？", "options": [{"text": "一起冒险，做刺激的事", "character": "樊长玉"}, {"text": "一起做饭，享受二人世界", "character": "李怀安"}, {"text": "看展、读书，文艺范儿", "character": "齐姝"}, {"text": "游乐园、逛街，开心就好", "character": "俞浅浅"}]},
+    {"id": 15, "text": "面对选择困难时，你会？", "options": [{"text": "抛硬币，让命运决定", "character": "俞浅浅"}, {"text": "列出利弊，仔细分析", "character": "齐旻"}, {"text": "听天由命，顺其自然", "character": "李怀安"}, {"text": "跟着直觉走", "character": "樊长玉"}]},
+    {"id": 16, "text": "你更喜欢哪种外表类型的人？", "options": [{"text": "阳光活力型", "character": "俞浅浅"}, {"text": "温柔体贴型", "character": "李怀安"}, {"text": "高冷神秘型", "character": "谢征"}, {"text": "成熟稳重型", "character": "齐旻"}]},
+    {"id": 17, "text": "当你压力大时，你会？", "options": [{"text": "找朋友倾诉", "character": "俞浅浅"}, {"text": "独自承受", "character": "谢征"}, {"text": "运动发泄", "character": "樊长玉"}, {"text": "冷静思考对策", "character": "齐旻"}]},
+    {"id": 18, "text": "你相信「命运」吗？", "options": [{"text": "我命由我不由天", "character": "樊长玉"}, {"text": "三分天注定，七分靠打拼", "character": "李怀安"}, {"text": "命运掌握在自己手中", "character": "齐旻"}, {"text": "顺其自然就好", "character": "俞浅浅"}]},
+    {"id": 19, "text": "如果可以，你会选择什么超能力？", "options": [{"text": "隐身术", "character": "谢征"}, {"text": "读心术", "character": "齐旻"}, {"text": "治愈术", "character": "李怀安"}, {"text": "飞行术", "character": "樊长玉"}]},
+    {"id": 20, "text": "你更在意别人的什么评价？", "options": [{"text": "是否真诚", "character": "樊长玉"}, {"text": "是否善良", "character": "李怀安"}, {"text": "是否有能力", "character": "齐旻"}, {"text": "是否有趣", "character": "俞浅浅"}]}
+  ]
+}

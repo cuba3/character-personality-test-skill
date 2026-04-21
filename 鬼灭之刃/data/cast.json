@@ -1,0 +1,17 @@
+{
+  "drama": "鬼灭之刃",
+  "year": "2019",
+  "director": "外崎春雄",
+  "screenplay": "吾峠呼世晴",
+  "studio": "ufotable",
+  "actors": [
+    {"name": "花江夏树", "role": "灶门炭治郎", "description": "男主角，水之呼吸使用者"},
+    {"name": "鬼头明里", "role": "灶门祢豆子", "description": "炭治郎的妹妹，变成鬼的少女"},
+    {"name": "下野纮", "role": "我妻善逸", "description": "雷之呼吸使用者"},
+    {"name": "松冈祯丞", "role": "嘴平伊之助", "description": "兽之呼吸使用者"},
+    {"name": "樱井孝宏", "role": "富冈义勇", "description": "水柱"},
+    {"name": "悠木碧", "role": "蝴蝶忍", "description": "虫柱"},
+    {"name": "日野聪", "role": "炼狱杏寿郎", "description": "炎柱"},
+    {"name": "花守ゆみり", "role": "甘露寺蜜璃", "description": "恋柱"}
+  ]
+}

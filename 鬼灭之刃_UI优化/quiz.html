@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鬼灭之刃角色人格测试</title>
+    <style>
+        :root {
+            --sys-blue: #007AFF;
+            --sys-blue-dark: #0A84FF;
+            --sys-indigo: #5856D6;
+            --sys-purple: #AF52DE;
+            --sys-pink: #FF2D55;
+            --sys-red: #FF3B30;
+            --sys-green: #34C759;
+            --sys-orange: #FF9500;
+            --sys-yellow: #FFCC00;
+            --sys-gray1: #8E8E93;
+            --sys-gray2: #AEAEB2;
+            --sys-gray3: #C7C7CC;
+            --sys-gray4: #D1D1D6;
+            --sys-gray5: #E5E5EA;
+            --sys-gray6: #F2F2F7;
+            --sys-black: #000000;
+            --sys-white: #FFFFFF;
+            --primary-gradient: linear-gradient(135deg, var(--sys-red) 0%, var(--sys-orange) 100%);
+            --spacing-1x: 8px;
+            --spacing-2x: 16px;
+            --spacing-3x: 24px;
+            --spacing-4x: 32px;
+            --spacing-5x: 40px;
+            --radius-s: 8px;
+            --radius-m: 12px;
+            --radius-l: 20px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+            --text-large-title: 31px;
+            --text-title-1: 25px;
+            --text-title-2: 19px;
+            --text-title-3: 17px;
+            --text-headline: 14px;
+            --text-body: 14px;
+            --text-callout: 13px;
+            --text-subhead: 12px;
+            --text-footnote: 12px;
+            --text-caption: 11px;
+            --leading-large-title: 38px;
+            --leading-title-1: 31px;
+            --leading-title-3: 22px;
+            --leading-body: 19px;
+            --avatar-xxl: 80px;
+            --avatar-display: 96px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --sys-blue: #0A84FF;
+                --sys-red: #FF453A;
+                --sys-orange: #FF9F0A;
+                --sys-gray1: #8E8E93;
+                --sys-gray2: #636366;
+                --sys-gray3: #48484A;
+                --sys-gray4: #3A3A3C;
+                --sys-gray5: #2C2C2E;
+                --sys-gray6: #1C1C1E;
+                --sys-black: #FFFFFF;
+                --sys-white: #000000;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "PingFang SC", sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            padding: var(--spacing-2x);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--sys-white);
+            border-radius: var(--radius-xl);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .container { background: var(--sys-gray6); }
+        }
+
+        .page {
+            padding: var(--spacing-4x) var(--spacing-3x);
+            display: none;
+            min-height: 500px;
+        }
+
+        .page.active { display: block; }
+
+        h1 {
+            text-align: center;
+            color: var(--sys-black);
+            font-size: var(--text-large-title);
+            font-weight: 400;
+            line-height: var(--leading-large-title);
+            margin-bottom: var(--spacing-2x);
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--sys-gray1);
+            font-size: var(--text-body);
+            line-height: var(--leading-body);
+            margin-bottom: var(--spacing-4x);
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: var(--spacing-2x) var(--spacing-3x);
+            background: var(--primary-gradient);
+            color: var(--sys-white);
+            border: none;
+            border-radius: var(--radius-full);
+            font-size: var(--text-headline);
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            text-align: center;
+            min-height: 56px;
+        }
+
+        .btn:hover { opacity: 0.95; }
+        .btn:active { transform: scale(0.98); }
+
+        .progress {
+            height: 4px;
+            background: var(--sys-gray5);
+            margin-bottom: var(--spacing-3x);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        @media (prefers-color-scheme: dark) { .progress { background: var(--sys-gray4); } }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .question-text {
+            font-size: var(--text-title-3);
+            color: var(--sys-black);
+            margin-bottom: var(--spacing-3x);
+            line-height: var(--leading-title-3);
+            font-weight: 500;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .question-text, .result-name, .result-desc { color: var(--sys-white); }
+            .subtitle, .result-actor, .result-quote { color: var(--sys-gray2); }
+        }
+
+        .options { display: flex; flex-direction: column; gap: var(--spacing-2x); }
+
+        .option {
+            padding: var(--spacing-2x);
+            border: 2px solid var(--sys-gray4);
+            border-radius: var(--radius-m);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: var(--text-body);
+            color: var(--sys-black);
+            background: var(--sys-white);
+            display: flex;
+            align-items: center;
+            min-height: 52px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .option { background: var(--sys-gray5); border-color: var(--sys-gray4); color: var(--sys-white); }
+            .option:hover { background: var(--sys-gray4); }
+        }
+
+        .option:hover { border-color: var(--sys-red); background: var(--sys-gray6); }
+        .option.selected { border-color: var(--sys-red); background: var(--sys-red); color: var(--sys-white); }
+
+        .intro-emoji {
+            text-align: center;
+            margin-bottom: var(--spacing-3x);
+            font-size: var(--avatar-display);
+            line-height: var(--avatar-display);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .intro-badge {
+            display: inline-block;
+            padding: var(--spacing-1x) var(--spacing-2x);
+            background: var(--sys-gray6);
+            color: var(--sys-gray1);
+            border-radius: var(--radius-full);
+            font-size: var(--text-footnote);
+            margin-bottom: var(--spacing-2x);
+        }
+
+        @media (prefers-color-scheme: dark) { .intro-badge { background: var(--sys-gray5); } }
+
+        .sphere-container {
+            width: 100%;
+            height: 300px;
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: var(--spacing-3x) 0;
+        }
+
+        .sphere {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: rotateSphere 20s linear infinite;
+        }
+
+        @keyframes rotateSphere {
+            from { transform: rotateY(0deg) rotateX(0deg); }
+            to { transform: rotateY(360deg) rotateX(10deg); }
+        }
+
+        .sphere-img {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--sys-white);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform-origin: center;
+        }
+
+        .sphere-img:hover {
+            transform: scale(1.3);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            z-index: 100;
+        }
+
+        .result-avatar {
+            width: 50%;
+            max-width: 250px;
+            aspect-ratio: 1;
+            margin: 0 auto var(--spacing-3x);
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--sys-red);
+            background: var(--sys-gray5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .result-avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .result-avatar .emoji { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 8vw; }
+
+        .result-name {
+            text-align: center;
+            font-size: var(--text-title-1);
+            font-weight: 600;
+            color: var(--sys-black);
+            margin-bottom: var(--spacing-1x);
+        }
+
+        .result-actor { text-align: center; color: var(--sys-gray1); font-size: var(--text-subhead); margin-bottom: var(--spacing-2x); }
+
+        .result-desc {
+            color: var(--sys-black);
+            font-size: var(--text-body);
+            line-height: var(--leading-body);
+            margin-bottom: var(--spacing-3x);
+            padding: var(--spacing-2x);
+            background: var(--sys-gray6);
+            border-radius: var(--radius-m);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .result-desc, .result-quote, .trait-tag { background: var(--sys-gray5); }
+            .result-avatar { border-color: var(--sys-red); }
+        }
+
+        .result-traits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-1x);
+            justify-content: center;
+            margin-bottom: var(--spacing-3x);
+        }
+
+        .trait-tag {
+            padding: var(--spacing-1x) var(--spacing-2x);
+            background: var(--primary-gradient);
+            color: var(--sys-white);
+            border-radius: var(--radius-full);
+            font-size: var(--text-caption);
+            font-weight: 500;
+        }
+
+        .result-quote {
+            text-align: center;
+            color: var(--sys-gray1);
+            font-style: italic;
+            margin-bottom: var(--spacing-3x);
+            padding: var(--spacing-2x);
+            border-left: 3px solid var(--sys-red);
+            background: var(--sys-gray6);
+            border-radius: 0 var(--radius-m) var(--radius-m) 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="start-page" class="page active">
+            <h1>鬼灭之刃角色人格测试</h1>
+            <p class="subtitle">测测你更像《鬼灭之刃》中的哪个角色</p>
+            <div class="sphere-container">
+                <div class="sphere" id="sphere-start"></div>
+            </div>
+            <div style="text-align: center;">
+                <span class="intro-badge">20题 · 8个角色</span>
+            </div>
+            <button class="btn" onclick="startQuiz()">开始测试</button>
+        </div>
+        
+        <div id="question-page" class="page">
+            <div class="progress">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="question-text" id="question-text"></div>
+            <div class="options" id="options"></div>
+        </div>
+        
+        <div id="result-page" class="page">
+            <h1>测试结果</h1>
+            <div class="sphere-container">
+                <div class="sphere" id="sphere"></div>
+            </div>
+            <div class="result-avatar" id="result-avatar"></div>
+            <div class="result-name" id="result-name"></div>
+            <div class="result-actor" id="result-actor"></div>
+            <div class="result-traits" id="result-traits"></div>
+            <div class="result-desc" id="result-desc"></div>
+            <div class="result-quote" id="result-quote"></div>
+            <button class="btn" onclick="location.reload()">重新测试</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {"id": 1, "text": "如果你遇到危险，你会怎么做？", "options": [{"text": "第一时间保护身边的人", "character": "灶门炭治郎"}, {"text": "使用武力解决", "character": "嘴平伊之助"}, {"text": "冷静分析寻找对策", "character": "富冈义勇"}, {"text": "想办法智取", "character": "蝴蝶忍"}]},
+            {"id": 2, "text": "你的朋友遇到困难，你会？", "options": [{"text": "二话不说去帮忙", "character": "炼狱杏寿郎"}, {"text": "默默陪在他身边", "character": "灶门炭治郎"}, {"text": "表面上嫌弃但还是会帮", "character": "蝴蝶忍"}, {"text": "给对方加油鼓劲", "character": "甘露寺蜜璃"}]},
+            {"id": 3, "text": "你如何看待「鬼」？", "options": [{"text": "即使是鬼也有苦衷", "character": "灶门炭治郎"}, {"text": "必须消灭", "character": "嘴平伊之助"}, {"text": "可以理解但不能原谅", "character": "富冈义勇"}, {"text": "研究它们的弱点", "character": "蝴蝶忍"}]},
+            {"id": 4, "text": "你恋爱时会？", "options": [{"text": "变得超级强", "character": "甘露寺蜜璃"}, {"text": "全心全意对对方好", "character": "灶门炭治郎"}, {"text": "害羞但会主动", "character": "我妻善逸"}, {"text": "默默守护", "character": "富冈义勇"}]},
+            {"id": 5, "text": "你最强的特质是？", "options": [{"text": "敏锐的直觉", "character": "灶门炭治郎"}, {"text": "强大的战斗力", "character": "嘴平伊之助"}, {"text": "冷静的判断力", "character": "富冈义勇"}, {"text": "聪明的头脑", "character": "蝴蝶忍"}]},
+            {"id": 6, "text": "你害怕什么？", "options": [{"text": "失去重要的人", "character": "灶门炭治郎"}, {"text": "孤独一人", "character": "我妻善逸"}, {"text": "承认自己弱小", "character": "嘴平伊之助"}, {"text": "被讨厌", "character": "富冈义勇"}]},
+            {"id": 7, "text": "你的战斗风格是？", "options": [{"text": "正面突击", "character": "炼狱杏寿郎"}, {"text": "技巧型", "character": "灶门炭治郎"}, {"text": "力量型", "character": "嘴平伊之助"}, {"text": "速度型", "character": "我妻善逸"}]},
+            {"id": 8, "text": "你如何面对失败？", "options": [{"text": "继续努力不放弃", "character": "灶门炭治郎"}, {"text": "变得更强大", "character": "甘露寺蜜璃"}, {"text": "反思自己的不足", "character": "蝴蝶忍"}, {"text": "下次一定赢", "character": "嘴平伊之助"}]},
+            {"id": 9, "text": "你的口头禅是？", "options": [{"text": "我会保护大家！", "character": "炼狱杏寿郎"}, {"text": "我不想死！", "character": "我妻善逸"}, {"text": "猪突猛进！", "character": "嘴平伊之助"}, {"text": "嗯！", "character": "灶门祢豆子"}]},
+            {"id": 10, "text": "你更喜欢什么样的伙伴？", "options": [{"text": "温柔可靠的人", "character": "灶门炭治郎"}, {"text": "强大的人", "character": "甘露寺蜜璃"}, {"text": "有趣的人", "character": "蝴蝶忍"}, {"text": "能一起战斗的人", "character": "炼狱杏寿郎"}]},
+            {"id": 11, "text": "面对强大的敌人，你会？", "options": [{"text": "勇敢战斗不退缩", "character": "炼狱杏寿郎"}, {"text": "想办法找到弱点", "character": "灶门炭治郎"}, {"text": "直接冲上去", "character": "嘴平伊之助"}, {"text": "使用计谋", "character": "蝴蝶忍"}]},
+            {"id": 12, "text": "你重视的东西是？", "options": [{"text": "家人和朋友", "character": "灶门炭治郎"}, {"text": "强大的力量", "character": "甘露寺蜜璃"}, {"text": "正义和责任", "character": "富冈义勇"}, {"text": "战斗的意义", "character": "炼狱杏寿郎"}]},
+            {"id": 13, "text": "你平时看起来像？", "options": [{"text": "温柔的大哥哥", "character": "灶门炭治郎"}, {"text": "可爱的女孩子", "character": "甘露寺蜜璃"}, {"text": "高冷的美男子", "character": "富冈义勇"}, {"text": "活泼开朗", "character": "炼狱杏寿郎"}]},
+            {"id": 14, "text": "你的梦想是？", "options": [{"text": "让妹妹变回人类", "character": "灶门炭治郎"}, {"text": "找到强大的伴侣", "character": "甘露寺蜜璃"}, {"text": "消灭所有恶鬼", "character": "炼狱杏寿郎"}, {"text": "变强", "character": "嘴平伊之助"}]},
+            {"id": 15, "text": "你如何表达感情？", "options": [{"text": "用行动表示", "character": "灶门炭治郎"}, {"text": "直接说出来", "character": "炼狱杏寿郎"}, {"text": "害羞不好意思说", "character": "我妻善逸"}, {"text": "腹黑地调侃", "character": "蝴蝶忍"}]},
+            {"id": 16, "text": "你的弱点是？", "options": [{"text": "家人被伤害", "character": "灶门炭治郎"}, {"text": "被说是没用的人", "character": "我妻善逸"}, {"text": "被讨厌", "character": "富冈义勇"}, {"text": "恋爱", "character": "甘露寺蜜璃"}]},
+            {"id": 17, "text": "战斗中你会？", "options": [{"text": "观察对手寻找破绽", "character": "灶门炭治郎"}, {"text": "全力进攻", "character": "炼狱杏寿郎"}, {"text": "用计谋", "character": "蝴蝶忍"}, {"text": "横冲直撞", "character": "嘴平伊之助"}]},
+            {"id": 18, "text": "你相信命运吗？", "options": [{"text": "命运要自己掌握", "character": "灶门炭治郎"}, {"text": "相信缘分", "character": "甘露寺蜜璃"}, {"text": "不相信", "character": "嘴平伊之助"}, {"text": "一半一半", "character": "富冈义勇"}]},
+            {"id": 19, "text": "你最想拥有什么能力？", "options": [{"text": "强大的嗅觉", "character": "灶门炭治郎"}, {"text": "雷电的力量", "character": "我妻善逸"}, {"text": "治愈能力", "character": "蝴蝶忍"}, {"text": "火焰的力量", "character": "炼狱杏寿郎"}]},
+            {"id": 20, "text": "你希望自己成为什么样的人？", "options": [{"text": "温柔强大的人", "character": "灶门炭治郎"}, {"text": "热情如火的人", "character": "炼狱杏寿郎"}, {"text": "可靠的人", "character": "富冈义勇"}, {"text": "可爱的人", "character": "甘露寺蜜璃"}]}
+        ];
+
+        const characters = {
+            "灶门炭治郎": {"name": "灶门炭治郎", "actor": "花江夏树", "description": "你更像《鬼灭之刃》中的灶门炭治郎！善良温柔，重视家人，有着敏锐的嗅觉，是水之呼吸的使用者。", "traits": ["善良温柔", "重视家人", "责任感强", "温柔体贴"], "quote": "我会保护妹妹！", "avatar": "🔥", "imageUrl": "https://pix2.tvzhe.com/thumb/star/53/217/260x346.jpg"},
+            "灶门祢豆子": {"name": "灶门祢豆子", "actor": "鬼头明里", "description": "你更像《鬼灭之刃》中的灶门祢豆子！虽然变成了鬼，但仍然保持着善良的内心。", "traits": ["善良可爱", "坚强勇敢", "保护家人", "萌系"], "quote": "嗯！", "avatar": "🌸", "imageUrl": "https://pix2.tvzhe.com/images/default/character_avatar_260x346.jpg"},
+            "我妻善逸": {"name": "我妻善逸", "actor": "下野纮", "description": "你更像《鬼灭之刃》中的我妻善逸！虽然平时爱哭怕事，但关键时刻非常可靠。", "traits": ["怕麻烦", "关键时刻可靠", "恋爱脑", "单相思"], "quote": "我不想死！", "avatar": "⚡", "imageUrl": "https://pix2.tvzhe.com/images/default/character_avatar_260x346.jpg"},
+            "嘴平伊之助": {"name": "嘴平伊之助", "actor": "松冈祯丞", "description": "你更像《鬼灭之刃》中的嘴平伊之助！暴力但单纯，战斗力超强。", "traits": ["单纯直接", "暴力倾向", "野兽直觉", "天然呆"], "quote": "猪突猛进！", "avatar": "🐗", "imageUrl": "https://pix2.tvzhe.com/thumb/star/8/953/260x346.jpg"},
+            "富冈义勇": {"name": "富冈义勇", "actor": "樱井孝宏", "description": "你更像《鬼灭之刃》中的富冈义勇！外冷内热，是水柱实力超强。", "traits": ["外冷内热", "沉默寡言", "实力强大", "傲娇"], "quote": "我没有被讨厌。", "avatar": "💧", "imageUrl": "https://pix2.tvzhe.com/thumb/star/8/953/260x346.jpg"},
+            "蝴蝶忍": {"name": "蝴蝶忍", "actor": "悠木碧", "description": "你更像《鬼灭之刃》中的蝴蝶忍！外表温柔可爱，实际上是毒杀高手。", "traits": ["腹黑可爱", "毒舌", "聪明伶俐", "温柔腹黑"], "quote": "真是可爱呢。", "avatar": "🦋", "imageUrl": "https://pix2.tvzhe.com/thumb/star/48/347/260x346.jpg"},
+            "炼狱杏寿郎": {"name": "炼狱杏寿郎", "actor": "日野聪", "description": "你更像《鬼灭之刃》中的炼狱杏寿郎！热情开朗，是炎柱，有着我燃烧般的灵魂！", "traits": ["热情开朗", "充满活力", "正义感强", "热血"], "quote": "我会保护大家！", "avatar": "🔥", "imageUrl": "https://pix2.tvzhe.com/images/default/character_avatar_260x346.jpg"},
+            "甘露寺蜜璃": {"name": "甘露寺蜜璃", "actor": "花守ゆみり", "description": "你更像《鬼灭之刃》中的甘露寺蜜璃！温柔可爱，恋爱时会变得超级强，是恋柱！", "traits": ["温柔可爱", "恋爱脑", "纯真热情", "力大无穷"], "quote": "我喜欢强大的人！", "avatar": "💗", "imageUrl": "https://pix2.tvzhe.com/images/default/character_avatar_260x346.jpg"}
+        };
+
+        let currentQuestion = 0;
+        let scores = {};
+        
+        for (let key in characters) {
+            scores[key] = 0;
+        }
+
+        function startQuiz() {
+            document.getElementById('start-page').classList.remove('active');
+            document.getElementById('question-page').classList.add('active');
+            showQuestion();
+        }
+
+        function createSphere(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            container.innerHTML = '';
+            
+            const charKeys = Object.keys(characters);
+            const radius = 80;
+            
+            charKeys.forEach((key, index) => {
+                const char = characters[key];
+                const phi = Math.acos(-1 + (2 * index) / charKeys.length);
+                const theta = Math.sqrt(charKeys.length * Math.PI) * phi;
+                
+                const x = radius * Math.cos(theta) * Math.sin(phi);
+                const y = radius * Math.sin(theta) * Math.sin(phi);
+                const z = radius * Math.cos(phi);
+                
+                const img = document.createElement('img');
+                img.className = 'sphere-img';
+                img.src = char.imageUrl || '';
+                img.alt = char.name;
+                img.title = char.name;
+                img.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+                img.onerror = function() {
+                    this.style.display = 'none';
+                };
+                
+                container.appendChild(img);
+            });
+        }
+
+        function initSpheres() {
+            createSphere('sphere');
+            createSphere('sphere-start');
+        }
+
+        function showQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('question-text').textContent = q.text;
+            
+            const progress = ((currentQuestion) / questions.length) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+            
+            const optionsDiv = document.getElementById('options');
+            optionsDiv.innerHTML = '';
+            
+            q.options.forEach((opt) => {
+                const btn = document.createElement('div');
+                btn.className = 'option';
+                btn.textContent = opt.text;
+                btn.onclick = () => selectOption(opt.character);
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        function selectOption(character) {
+            scores[character]++;
+            currentQuestion++;
+            
+            if (currentQuestion < questions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            let maxScore = 0;
+            let resultCharacter = '灶门炭治郎';
+            
+            for (let key in scores) {
+                if (scores[key] > maxScore) {
+                    maxScore = scores[key];
+                    resultCharacter = key;
+                }
+            }
+            
+            const char = characters[resultCharacter];
+            
+            document.getElementById('question-page').classList.remove('active');
+            document.getElementById('result-page').classList.add('active');
+            
+            createSphere('sphere');
+            
+            const avatarDiv = document.getElementById('result-avatar');
+            if (char.imageUrl) {
+                avatarDiv.innerHTML = `<img src="${char.imageUrl}" onerror="this.parentNode.innerHTML='<div class=\\'emoji\\'>${char.avatar}</div>'">`;
+            } else {
+                avatarDiv.innerHTML = `<div class="emoji">${char.avatar}</div>`;
+            }
+            
+            document.getElementById('result-name').textContent = char.name;
+            document.getElementById('result-actor').textContent = '配音：' + char.actor;
+            document.getElementById('result-desc').textContent = char.description;
+            document.getElementById('result-quote').textContent = '「' + char.quote + '」';
+            
+            const traitsDiv = document.getElementById('result-traits');
+            traitsDiv.innerHTML = '';
+            char.traits.forEach(trait => {
+                const tag = document.createElement('span');
+                tag.className = 'trait-tag';
+                tag.textContent = trait;
+                traitsDiv.appendChild(tag);
+            });
+        }
+        
+        window.onload = initSpheres;
+    </script>
+</body>
+</html>
