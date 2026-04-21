@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """
 网页缓存爬虫 - 只负责将网页内容保存到tmp目录
-用法: python scrape.py <剧集名> <URL> [输出目录]
+用法: python scrape.py <剧集名> <URL>
 示例: 
   python scrape.py 逐玉 https://movie.douban.com/subject/36554061/celebrities
   python scrape.py 逐玉 https://www.tvmao.com/kanju/ZGFqI2Fi/actors
-  python scrape.py 逐玉 https://www.tvmao.com/kanju/ZGFqI2Fi/actors /Users/lk/vibe_projects/x_test
 """
 
 import os
@@ -47,39 +46,27 @@ def save_cache(html, cache_file):
 
 def main():
     if len(sys.argv) < 3:
-        print("用法: python scrape.py <剧集名> <URL> [输出目录]")
+        print("用法: python scrape.py <剧集名> <URL>")
         print("示例:")
         print("  python scrape.py 逐玉 https://movie.douban.com/subject/36554061/celebrities")
         print("  python scrape.py 逐玉 https://www.tvmao.com/kanju/ZGFqI2Fi/actors")
-        print("  python scrape.py 逐玉 https://www.tvmao.com/kanju/ZGFqI2Fi/actors /Users/lk/vibe_projects/x_test")
         sys.exit(1)
     
     drama = sys.argv[1]
     url = sys.argv[2]
     
-    project_root = None
-    if len(sys.argv) >= 4:
-        project_root = sys.argv[3]
-    
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    if project_root:
-        drama_dir = os.path.join(project_root, drama)
-    else:
-        drama_dir = os.path.abspath(os.path.join(script_dir, "..", "..", "..", drama))
-    
-    tmp_dir = os.path.join(drama_dir, "tmp")
+    tmp_dir = os.path.abspath(os.path.join(script_dir, "..", "..", "..", "tmp"))
     
     parsed = urlparse(url)
     filename = parsed.netloc + parsed.path.replace('/', '_') + '.html'
     filename = filename[:100]
     
-    cache_file = os.path.join(tmp_dir, filename)
+    cache_file = os.path.join(tmp_dir, drama, filename)
     
     print("=" * 50)
     print(f"剧集: {drama}")
     print(f"URL: {url}")
-    print(f"输出: {drama_dir}")
     print(f"缓存: {cache_file}")
     print("=" * 50)
     
